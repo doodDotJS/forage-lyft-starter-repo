@@ -81,35 +81,35 @@ class Car():
 
 class CarFactory():
 
-    def create_calliope(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int):
+    def create_calliope(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
         """ Create a Calliope with a Capulet Engine and Spindler Battery """
         return Car(
             CapuletEngine(last_service_mileage, current_mileage),
             SpindlerBattery(last_service_date, current_date)
         )
 
-    def create_glissade(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int):
+    def create_glissade(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
         """ Create a Glissade with a Willoughby Engine and Spindler Battery """
         return Car(
             WilloughbyEngine(last_service_mileage, current_mileage),
             SpindlerBattery(last_service_date, current_date)
         )
 
-    def create_palindrome(current_date: date, last_service_date: date, warning_light_on: bool):
+    def create_palindrome(current_date: date, last_service_date: date, warning_light_on: bool) -> Car:
         """ Create a Palindrome with a Sternman Engine and Spindler Battery """
         return Car(
             SternmanEngine(warning_light_on),
             SpindlerBattery(last_service_date, current_date)
         )
 
-    def create_rorschach(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int):
+    def create_rorschach(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
         """ Create a Rorschach with a Willoughby Engine and Nubbin Battery """
         return Car(
             WilloughbyEngine(last_service_mileage, current_mileage),
             NubbinBattery(last_service_date, current_date)
         )
 
-    def create_thovex(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int):
+    def create_thovex(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
         """ Create a Thovex with a Capulet engine and Nubbin Battery """
         return Car(
             CapuletEngine(last_service_mileage, current_mileage),
