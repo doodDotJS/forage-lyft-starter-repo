@@ -47,7 +47,7 @@ class SpindlerBattery(BatteryBaseClass):
 
     def needs_service(self) -> bool:
         date_of_expiry = self.last_service_date.replace(
-            year=self.last_service_date.year + 2)
+            year=self.last_service_date.year + 3)
         return date_of_expiry < self.current_date
 
 
